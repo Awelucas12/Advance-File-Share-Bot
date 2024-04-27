@@ -11,10 +11,10 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '21414727'))
-API_HASH = environ.get('API_HASH', 'b4135f6b8cd476d931e78787a0cb77c1') 
-BOT_TOKEN = environ.get('BOT_TOKEN', "7031814989:AAGkItvg-uqYRFJ1vNTGpGBowgLuKUEY46o") 
+SESSION = environ.get('SESSION', 'zion films')
+API_ID = int(environ.get('API_ID', '25595324'))
+API_HASH = environ.get('API_HASH', '0102b3dbf501dc0fb3176d4c9685eec8') 
+BOT_TOKEN = environ.get('BOT_TOKEN', "6848893442:AAGNdrjCU6bNemg7tsf7SIQ08NqwKlwEXEI") 
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -22,8 +22,8 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://graph.org/file/b13f89e74f5d221a94536.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6796937630').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002084771326').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7064581842').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002141270848').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
@@ -38,12 +38,12 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 auth_channel = environ.get('AUTH_CHANNEL', '')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
-REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1001998607849')
+REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1002042712851')
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002013600080'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002096211292'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'VJ_Bot_Disscussion')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
